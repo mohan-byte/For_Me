@@ -1,1 +1,1 @@
-<img src=x onerror=document.alert("navigator.appVersion")>
+<img src=x onerror=document.write("navigator.appVersion")>
