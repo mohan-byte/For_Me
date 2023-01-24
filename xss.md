@@ -1,1 +1,2 @@
-<img src=x onerror=document.write(xxx)>
+<img src="http://ucayd0dkf7w9x7wi9iujh4hzlqrgf5.burpcollaborator.net.jpg"></img>
+<img style="max-width: 100%;" src="x" onerror="print(1)">
